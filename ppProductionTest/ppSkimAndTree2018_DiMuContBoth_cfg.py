@@ -15,10 +15,21 @@ process.options = cms.untracked.PSet(wantSummary = cms.untracked.bool(True))
 # Define the input source
 process.source = cms.Source("PoolSource",
    fileNames = cms.untracked.vstring(
-#'/store/data/Run2018C/MinimumBias1/AOD/12Nov2019_UL2018_LowPU-v1/10000/70936BDA-CF5F-9B45-A7C6-8990F3376337.root'
-'/store/data/Run2018C/MinimumBias1/AOD/12Nov2019_UL2018_LowPU-v1/10000/94A9A387-7D22-414D-9F33-341B31D08105.root',
-'/store/data/Run2018C/MinimumBias1/AOD/12Nov2019_UL2018_LowPU-v1/10000/8D883B51-D729-6647-A232-6A49A84C4CD3.root',
-'/store/data/Run2018C/MinimumBias1/AOD/12Nov2019_UL2018_LowPU-v1/10000/F5020CE3-198E-D54C-ACD7-AE4E2E832C1F.root'
+# MB
+#'/store/data/Run2018C/MinimumBias1/AOD/12Nov2019_UL2018_LowPU-v1/10000/94A9A387-7D22-414D-9F33-341B31D08105.root',
+#'/store/data/Run2018C/MinimumBias1/AOD/12Nov2019_UL2018_LowPU-v1/10000/8D883B51-D729-6647-A232-6A49A84C4CD3.root',
+#'/store/data/Run2018C/MinimumBias1/AOD/12Nov2019_UL2018_LowPU-v1/10000/F5020CE3-198E-D54C-ACD7-AE4E2E832C1F.root'
+
+# HM
+#'/store/data/Run2018C/HighMultiplicityEOF1/AOD/12Nov2019_UL2018_LowPU-v1/20000/A3E16F36-B8EE-1340-9E9F-BE0DF2C9AFFF.root',
+#'/store/data/Run2018C/HighMultiplicityEOF1/AOD/12Nov2019_UL2018_LowPU-v1/20000/E4F42416-619D-5B47-9791-A2478D24229F.root',
+#'/store/data/Run2018C/HighMultiplicityEOF1/AOD/12Nov2019_UL2018_LowPU-v1/20000/587F5403-29C7-494E-93FA-8496A4FC1E16.root',
+
+#Double Muon
+'/store/data/Run2018C/DoubleMuonLowPU/AOD/12Nov2019_UL2018_LowPU-v1/20000/B9E527AB-32DC-A747-B9F5-2178AE651474.root',
+'/store/data/Run2018C/DoubleMuonLowPU/AOD/12Nov2019_UL2018_LowPU-v1/20000/D29F0BC7-4C5C-6440-9540-1AC8D8C28E41.root',
+'/store/data/Run2018C/DoubleMuonLowPU/AOD/12Nov2019_UL2018_LowPU-v1/20000/E5088E8C-7E63-C648-953A-B02C1126E134.root'
+
 #'root://cmsxrootd.fnal.gov//store/data/Run2018C/DoubleMuonLowPU/AOD/PromptReco-v2/000/319/467/00000/F844B34A-9A86-E811-BE71-FA163E6B749C.root'
 ),
    inputCommands=cms.untracked.vstring('keep *')
