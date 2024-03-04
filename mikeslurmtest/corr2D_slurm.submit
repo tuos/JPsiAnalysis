@@ -1,0 +1,20 @@
+#!/bin/bash
+#SBATCH --nodes=1
+#SBATCH --tasks=1
+#SBATCH --mem=2G
+#SBATCH --job-name=mult80_pT02
+#SBATCH --time=12:00:00
+#SBATCH --output=/nobackup/user/tuos/egamma/correlationsJpsi/mikeslurmtest/log/corr2D-Jpsi-%j.out
+#SBATCH --array=1-6
+
+run_pT="pT18"
+
+run_mult="mult100"
+
+cd /nobackup/user/tuos/egamma/correlationsJpsi/mikeslurmtest/
+
+get_file=$(sed -n "${SLURM_ARRAY_TASK_ID}p;" DMfiles_test.txt)
+
+root -l '/nobackup/user/tuos/egamma/correlationsJpsi/mikeslurmtest/Corr2D_Jpsi_loop_11mBin_shell.C("'$get_file'", "'$run_pT'", "'$run_mult'")'
+
+
